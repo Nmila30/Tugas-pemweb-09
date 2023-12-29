@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <form onsubmit="Login()">
+        <table>
+        <tr>
+        <td><label for="">Nama Pelanggan :</label></td>
+        <td><input type="text" name="namaPelanggan" id="namaPelanggan" /></td>
+        </tr>
+        <tr>
+        <td><label for="">Email :</label></td>
+        <td><input type="text" name="email" id="email" /></td>
+        </tr>
+        <tr>
+        <td><label for="">Jam Keberangkatan :</label></td>
+        <td><input type="text" name="jamKeberangkatan" id="jamKeberangkatan" /></td>
+        </tr>
+        <tr>
+        <td><label for="">Tujuan Keberangkatan :</label></td>
+        <td><input type="text" name="tujuanKeberangkatan" id="tujuanKeberangkatan" /></td>
+        </tr>
+        <tr>
+        <td><label for="">Jumlah Tiket :</label></td>
+        <td><input type="text" name="jumlahTiket" id="jumlahTiket"></td>
+        </tr>
+        <tr><td></td><td><input type="submit" value="Login"></input></td></tr>
+    </table>
+    </form>
+
+    <script>
+        function Login() {
+            // Tangkep Username & password -> simpan kevariabel
+            let NP = document.getElementById("namaPelanggan").value;
+            let email = document.getElementById("email").value;
+            let JK = document.getElementById("jamKeberangkatan").value;
+            let TK = document.getElementById("tujuanKeberangkatan").value;
+            let JT = document.getElementById("jumlahTiket").value;
+
+            // periksa username password sesuai atau tidak
+            if (NP === "Nurmila" && email === "nmila3042@gmail.com" && JK === "10.00" && TK === "Bandung" && JT === "4") {
+                alert("Login Berhasil");
+            } else {
+              alert("Login Gagal");
+            }
+                
+            
+        }
+    </script>
+</body>
+</html>
